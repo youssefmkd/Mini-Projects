@@ -5,24 +5,46 @@ A simple Rock Paper Scissors game built with **vanilla JavaScript**, played via 
 
 
 ## 🎮 How to Play
-
-1. Open the `index.html` file in a web browser.
-2. Open the **DevTools Console** (Right-click → Inspect → Console).
-3. Follow the prompts to type `"rock"`, `"paper"`, or `"scissors"`.
-4. Play 5 rounds against the computer and see who wins!
-
+1. Open the index.html file in your web browser.
+2. Choose your move by clicking one of the following buttons:
+   - 🪨 Rock
+   - 📄 Paper
+   - ✂️ Scissors
+3. The computer will make its move, and the result will be displayed on the screen.
+4. The score is updated live, and the game continues until either you or the computer reaches 5 points.
+5. You can reset the game anytime by clicking the Reset Game button.
 
 ## 🧠 Features
 
-- Random computer choice each round
-- Validates user input (case-insensitive)
-- Score tracking across 5 rounds
-- Determines and displays the overall winner
+- Interactive UI with clickable buttons for each choice.
+- Displays player and computer choices with emojis.
+- Score tracking for both player and computer.
+- The game ends when a player reaches 5 points.
+- Includes a Reset Game button to start a new game.
+- Highlights the computer's choice with a golden color.
+- User input is validated, and the outcome of each round is clearly shown.
 
 ## 🚀 Concepts Practiced
 
-- Functions and control flow
-- Arrays and randomization
-- Loops and conditional logic
-- DOM basics (via script loading)
-- User input with `prompt()`
+- DOM Manipulation: Handling user input and dynamically updating the page.
+- Event Listeners: Responding to button clicks for each round.
+- Conditionals & Loops: Determining the winner of each round and the game.
+- Randomization: The Computer's random selection for each round.
+- Score Tracking: Updating the score dynamically and announcing the final winner.
+- UI/UX: Enhancing user experience with emojis and a visual interface for playing the game.
+
+## 🔨 Recent Updates
+-Branching and Merging:
+--Created a new branch called rps-ui to work on the UI improvements.
+--Added interactive buttons to replace the prompt input and designed a better user interface.
+--After completing the UI updates, merged the rps-ui branch into the main branch.
+--Deleted the rps-ui branch after the merge to keep the repository clean.
+-Event Listeners:
+--Replaced the previous prompt-based system with buttons that trigger the game logic through click event listeners.
+--Added a reset button to allow users to restart the game without refreshing the page.
+-Score and UI Enhancements:
+--Added real-time score tracking and dynamic display of results.
+--Highlighted the computer's choice with a golden color for better visibility.
+--Used emojis to visually represent the choices for both player and computer.
+
+  
