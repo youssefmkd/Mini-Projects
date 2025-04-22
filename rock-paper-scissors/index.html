@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Open the Console to Play</h1>
+    <div class="container">
+        <h1>Rock Paper Scissors Game</h1>
+
+    <div class="section-title">Player Choice</div>
+    <div id="player-buttons" class="player-choice">
+        <button data-choice="rock">
+            <img src="imgs/rock.png" alt="Rock" width="50">
+        </button>
+        <button data-choice="paper">
+            <img src="imgs/paper.png" alt="Paper" width="50">
+        </button>
+        <button data-choice="scissors">
+            <img src="imgs/scissors.png" alt="Scissors" width="50">
+        </button>
+    </div>
+
+    <div class="section-title">Computer Choice</div>
+    <div id="computer-buttons" class="computer-choice">
+        <button data-choice="rock">
+            <img src="imgs/rock.png" alt="Rock" width="50">
+        </button>
+        <button data-choice="paper">
+            <img src="imgs/paper.png" alt="Paper" width="50">
+        </button>
+        <button data-choice="scissors">
+            <img src="imgs/scissors.png" alt="Scissors" width="50">
+        </button>
+    </div>
+
+    <div id="results" class="results"></div>
+    <div id="score"></div>
+
+    <button id="reset-btn" class="reset-button">Reset Game</button>
+    </div>
+    
+
+    <script src="script.js"></script>
 </body>
 </html>

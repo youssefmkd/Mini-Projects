@@ -1,84 +1,127 @@
-// Array of possible choices for both player and computer
-const options = ["rock", "paper", "scissors"];
+// Rock Paper Scissors Game — built by Youssef MOUKADEM
 
-// Returns a random choice of the computer
+// Wait for the DOM to fully load before running the script
+document.addEventListener("DOMContentLoaded", function() {
+
+    //Available choices for both the player and computer
+    const options = ["rock", "paper", "scissors"];
+
+    // Initial scores
+    let scorePlayer = 0;
+    let scoreComputer = 0;
+
+// DOM elements for showing results, score, computer buttons, player buttons, and the reset button
+const resultsDiv = document.getElementById('results');
+const scoreDiv = document.getElementById('score');
+const computerButtons = document.querySelectorAll('#computer-buttons button');
+const playerButtons = document.querySelectorAll('#player-buttons button');
+const resetButton = document.getElementById('reset-btn');
+
+// Display initial score on page load
+scoreDiv.textContent = `👤 Player: ${scorePlayer} - 🤖 Computer: ${scoreComputer}`;
+
+// Picks a random choice from options for the computer
 function getComputerChoice(){
-    const choice = options[Math.floor(Math.random() * options.length)];
-    return choice;
+    return options[Math.floor(Math.random() * options.length)];
 }
 
-// Determines the winner of a single round
-function checkWinner(playerSelection, computerSelection){
-    if (playerSelection == computerSelection) { 
+// Determines the winner of a round based on traditional Rock-Paper-Scissors rules
+function checkWinner(player, computer){
+    if (player === computer) { 
         return "Tie"; //Same choice -> Tie
     } else if (
-        (playerSelection == "rock" && computerSelection == "scissors") || 
-        (playerSelection == "paper" && computerSelection == "rock") || 
-        (playerSelection == "scissors" && computerSelection == "paper")){
+        (player === "rock" && computer === "scissors") || 
+        (player === "paper" && computer === "rock") || 
+        (player === "scissors" && computer === "paper")){
             return "Player";  // Player wins based on game rules
         }else{
             return "Computer"; // Otherwise, computer wins
         }
     } 
 
-// Plays a single round and returns a result message
-function playRound(playerSelection, computerSelection){
-    const result = checkWinner(playerSelection, computerSelection);
-        if(result == "Tie"){
-            return "It's a Tie!"
-        }else if(result == "Player"){
-            return `You Win! ${playerSelection} beats ${computerSelection}`
-        }else{
-            return `You Lose! ${computerSelection} beats ${playerSelection}`
+// Highlights the computer's selected choice by adding a class
+function highlightComputerChoice(choice){
+    computerButtons.forEach(btn => {
+        btn.classList.remove('highlight');  // Clear previous highlight
+        if (btn.getAttribute('data-choice') === choice){
+            btn.classList.add('highlight'); //Highlight current choice
         }
-    }
-
-// Prompts the user to enter a valid choice (rock, paper, or scissors)
-function getPlayerChoice(){
-    let validatedInput = false;
-    while(validatedInput == false){
-        const choice = prompt("Rock Paper Scissors");
-        if (choice == null){
-            continue; // Id user cancels, skip and ask again
-        }
-        const choiceInLower = choice.toLowerCase();
-        if(options.includes(choiceInLower)){
-            validatedInput = true;
-            return choiceInLower; // Return the valid choice
-        }
-    }
+    });
 }
 
-// Plays the full game(5 rounds) and logs the final winner
-function game(){
-    let scorePlayer = 0;
-    let scoreComputer = 0;
-    console.log("Welcome!")
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log("**********************");
+// Removes highlight from all computer buttons
+function clearComputerHighlight(){
+    computerButtons.forEach(btn => btn.classList.remove('highlight'));
+}
 
-        //Update score based on round winner
-        if(checkWinner(playerSelection, computerSelection) == "Player"){
+// Plays one round of the game
+function playRound(playerSelection, computerSelection){
+    highlightComputerChoice(computerSelection);
+    const result = checkWinner(playerSelection, computerSelection);
+    let emojiMap = {
+        "rock": "🪨", "paper": "📄", "scissors": "✂️"
+    }
+    let roundMessage = '';
+        if(result == "Tie"){
+            roundMessage = `🤝It's a Tie! You both choose ${emojiMap[playerSelection]}`;
+        }else if(result == "Player"){
+            roundMessage = `🎉 You Win! ${emojiMap[playerSelection]} ${playerSelection} beats ${computerSelection}`
             scorePlayer++;
-        }else if(checkWinner(playerSelection, computerSelection) == "Computer"){
+        }else{
+            roundMessage = `💻 You Lose! ${emojiMap[computerSelection]} ${computerSelection} beats ${playerSelection}`
             scoreComputer++;
         }
+
+        resultsDiv.textContent = roundMessage;
+        scoreDiv.textContent = `👤 Player: ${scorePlayer} - 🤖 Computer: ${scoreComputer}`;
+
+        if(scorePlayer === 5 || scoreComputer === 5){
+            declareFinalWinner();
+        }
     }
 
-    // Final result after 5 rounds
-    console.log("Game over")
-    if(scorePlayer > scoreComputer){
-        console.log("You win the game!");
-    }else if(scorePlayer < scoreComputer){
-        console.log("Computer wins the game!");
-    }else{
-        console.log("It's a tie!");
+    // Displays final result and disables further input
+    function declareFinalWinner(){
+        const finalMessage = scorePlayer > scoreComputer
+        ? "🏆 You won the game!"
+        : "😢 Computer wins the game!";
+        resultsDiv.textContent = finalMessage;
+        disablePlayerButtons();
     }
 
-}
+    // Enables all player choice buttons
+    function enablePlayerButtons(){
+        playerButtons.forEach(button => {
+            button.disabled = false;
+        });
+    }
 
-// Start the game
-game();
+    // Disables all player choice buttons
+    function disablePlayerButtons(){
+        playerButtons.forEach(button => {
+            button.disabled = true;
+        });
+    }
+
+    // Resets game state and UI to initial values
+    function resetGame(){
+        scorePlayer = 0;
+        scoreComputer = 0;
+        resultsDiv.textContent = '';
+        scoreDiv.textContent = `👤 Player: ${scorePlayer} - 🤖 Computer: ${scoreComputer}`;
+        clearComputerHighlight();
+        enablePlayerButtons();
+    }
+
+    // Adds click event listeners to each player choice button
+    playerButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const playerChoice = button.getAttribute("data-choice");
+            const computerChoice = getComputerChoice();
+            playRound(playerChoice, computerChoice);
+        })
+    });
+
+    // Adds click event listener to the reset button
+    resetButton.addEventListener("click", resetGame);
+});
