@@ -47,4 +47,7 @@ A simple Rock Paper Scissors game built with **vanilla JavaScript**, played via 
 - Highlighted the computer's choice with a golden color for better visibility.
 - Used emojis to visually represent the choices for both player and computer.
 
+![Rock-Paper-Scissors](https://github.com/user-attachments/assets/67cab2a3-ca4e-42eb-a24e-fee407634b14)
+
+
   
