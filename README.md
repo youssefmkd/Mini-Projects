@@ -34,17 +34,17 @@ A simple Rock Paper Scissors game built with **vanilla JavaScript**, played via 
 - UI/UX: Enhancing user experience with emojis and a visual interface for playing the game.
 
 ## 🔨 Recent Updates
--Branching and Merging:
-    - Created a new branch called rps-ui to work on the UI improvements.
-    - Added interactive buttons to replace the prompt input and designed a better user interface.
-    - After completing the UI updates, merged the rps-ui branch into the main branch.
-    - Deleted the rps-ui branch after the merge to keep the repository clean.
--Event Listeners:
---Replaced the previous prompt-based system with buttons that trigger the game logic through click event listeners.
---Added a reset button to allow users to restart the game without refreshing the page.
--Score and UI Enhancements:
---Added real-time score tracking and dynamic display of results.
---Highlighted the computer's choice with a golden color for better visibility.
---Used emojis to visually represent the choices for both player and computer.
+1. Branching and Merging:
+- Created a new branch called rps-ui to work on the UI improvements.
+- Added interactive buttons to replace the prompt input and designed a better user interface.
+- After completing the UI updates, merged the rps-ui branch into the main branch.
+- Deleted the rps-ui branch after the merge to keep the repository clean.
+2. Event Listeners:
+- Replaced the previous prompt-based system with buttons that trigger the game logic through click event listeners.
+- Added a reset button to allow users to restart the game without refreshing the page.
+3. Score and UI Enhancements:
+- Added real-time score tracking and dynamic display of results.
+- Highlighted the computer's choice with a golden color for better visibility.
+- Used emojis to visually represent the choices for both player and computer.
 
   
