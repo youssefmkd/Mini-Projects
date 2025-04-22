@@ -35,10 +35,10 @@ A simple Rock Paper Scissors game built with **vanilla JavaScript**, played via 
 
 ## 🔨 Recent Updates
 -Branching and Merging:
---Created a new branch called rps-ui to work on the UI improvements.
---Added interactive buttons to replace the prompt input and designed a better user interface.
---After completing the UI updates, merged the rps-ui branch into the main branch.
---Deleted the rps-ui branch after the merge to keep the repository clean.
+    - Created a new branch called rps-ui to work on the UI improvements.
+    - Added interactive buttons to replace the prompt input and designed a better user interface.
+    - After completing the UI updates, merged the rps-ui branch into the main branch.
+    - Deleted the rps-ui branch after the merge to keep the repository clean.
 -Event Listeners:
 --Replaced the previous prompt-based system with buttons that trigger the game logic through click event listeners.
 --Added a reset button to allow users to restart the game without refreshing the page.
