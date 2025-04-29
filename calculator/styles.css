@@ -15,7 +15,7 @@ body{
 }
 
 button.number{
-    border: 1px solid greenyellow;
+    border: 2px solid greenyellow;
     border-radius: 10px;
 }
 
@@ -24,7 +24,7 @@ button.number:hover{
 }
 
 button.operator{
-    border: 1px solid steelblue;
+    border: 2px solid steelblue;
     border-radius: 10px;
 }
 
@@ -33,7 +33,7 @@ button.operator:hover{
 }
 
 button.decimal{
-    border: 1px solid gold;
+    border: 2px solid gold;
     border-radius: 10px;
 }
 
@@ -42,7 +42,7 @@ button.decimal:hover{
 }
 
 button.equal{
-    border: 1px solid pink;
+    border: 2px solid pink;
     border-radius: 10px;
 }
 
@@ -51,7 +51,7 @@ button.equal:hover{
 }
 
 #clear-btn{
-    border: 1px solid violet;
+    border: 2px solid violet;
     border-radius: 10px;
 }
 
@@ -68,7 +68,7 @@ button.equal:hover{
 
 #screen{
     width: 240px;
-    border: 1px solid salmon;
+    border: 3px solid salmon;
     height: 75px;
     margin: 15px;
     display: flex;

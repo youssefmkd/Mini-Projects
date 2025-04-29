@@ -88,3 +88,35 @@ A browser-based drawing app inspired by the classic Etch-A-Sketch toy. Draw by h
 - JavaScript Functions: Modular, clean code for reusability.
 
 ![Etch-A-Sketch](https://github.com/user-attachments/assets/899e3714-fa9d-4275-90ec-b32f24ac8bd8)
+
+# 🧮 JavaScript Calculator
+
+A simple, responsive calculator built with HTML, CSS, and JavaScript. Perform basic arithmetic operations with a user-friendly interface and real-time display updates!
+
+## 🕹️ How to Use
+
+1. Open the index.html file in your browser.
+2. Click number buttons (0–9) to enter values.
+3. Use operator buttons (+, -, x, /) to select an operation.
+4. Press the = button to calculate the result.
+5. Use the . button to add a decimal point.
+6. Hit the Clear button to reset the calculator.
+
+## 🎨 Features
+
+- Real-time updating of input and result screens.
+- Handles basic arithmetic: addition, subtraction, multiplication, and division.
+- Prevents invalid inputs like multiple decimals.
+- Rounds results to three decimal places for clarity.
+- Responsive layout, clean design using CSS Grid and Flexbox.
+- Truncates long results with an ellipsis (...) to avoid overflow.
+
+## 🧠 Concepts Practiced
+
+- DOM Manipulation: Dynamically updates calculator screens based on user input.
+- Event Listeners: Responds to button clicks and user interactions.
+- String and Number Handling: Converts between data types for math and display.
+- Control Flow: Handles edge cases like multiple decimals and chained operations.
+- Clean, Modular Functions: Organized logic into reusable parts (handleNumber, handleOperator, calculate, etc).
+
+![Calculator](https://github.com/user-attachments/assets/4c22d8e6-7fde-4a83-b7b1-2be0789ddf28)
