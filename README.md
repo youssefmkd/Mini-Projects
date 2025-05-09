@@ -120,3 +120,35 @@ A simple, responsive calculator built with HTML, CSS, and JavaScript. Perform ba
 - Clean, Modular Functions: Organized logic into reusable parts (handleNumber, handleOperator, calculate, etc).
 
 ![Calculator](https://github.com/user-attachments/assets/4c22d8e6-7fde-4a83-b7b1-2be0789ddf28)
+
+# 📚 JavaScript Library App
+
+A dynamic, browser-based book library built with HTML, CSS, and JavaScript. Add books, track their read status, and manage your collection with ease!
+
+## 🕹️ How to Use
+
+1. Open the index.html file in your browser.
+2. Click the "New Book" button to display the form.
+3. Enter the book's Title, Author, Pages, and Read Status.\
+4. Click Submit to add the book to your library.
+5. Use Toggle Read to update a book’s status.
+6. Click Remove to delete a book from your library.
+
+## 🎨 Features
+
+- Add and display books with title, author, page count, and read status.
+- Dynamically update the display as books are added or removed.
+- Toggle the read status between Read and Not Read Yet.
+- Simple and clean card-based UI layout.
+- Modular code structure for readability and scalability.
+
+## 🧠 Concepts Practiced
+
+- Constructor Functions: Created a Book constructor to structure book objects.
+- Prototype Methods: Used toggleRead() to modify book state.
+- DOM Manipulation: Dynamically renders book cards using JavaScript.
+- Event Handling: Managed form submissions and button clicks with event listeners.
+- Control Flow: Handles user actions like toggling and removing with intuitive updates.
+- Clean Logic Separation: Core functionality organized into functions (addBookToLibrary, render, removeBook, etc).
+
+![Library](https://github.com/user-attachments/assets/66bc8de6-f082-429d-88df-7d0d0de0779b)
