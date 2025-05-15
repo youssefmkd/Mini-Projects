@@ -152,3 +152,37 @@ A dynamic, browser-based book library built with HTML, CSS, and JavaScript. Add 
 - Clean Logic Separation: Core functionality organized into functions (addBookToLibrary, render, removeBook, etc).
 
 ![Library](https://github.com/user-attachments/assets/66bc8de6-f082-429d-88df-7d0d0de0779b)
+
+# ❌⭕ Vanilla-Xo
+
+A simple and modular Tic-Tac-Toe game built using HTML, CSS, and JavaScript. Two players can enter names, take turns playing, and get instant win/tie results—all in your browser!
+
+## 🕹️ How to Play
+
+1. Open index.html in your browser.
+2. Enter player names in the input fields.
+3. Click the Start Game button to begin.
+4. Players take turns clicking empty squares to mark X or O.
+5. The game detects wins or ties automatically.
+6. Click Restart Game to clear the board and play again.
+
+## 🎨 Features
+
+- Enter custom player names before starting.
+- Alternates turns between Player X and Player O.
+- Automatically detects win and tie conditions.
+- Displays messages like “Player X wins!” or “It’s a tie!”.
+- Reset button to restart the game without reloading the page.
+- Clean and responsive board UI.
+
+## 🧠 Concepts Practiced
+
+- Factory Functions: Used to create player objects with createPlayer().
+- Module Pattern: Encapsulated game logic using IIFEs (Immediately Invoked Function Expressions).
+- Encapsulation: Separated logic cleanly into modules like Gameboard, Game, and displayController.
+- Closures: Used to keep certain variables like gameboard private within modules.
+- DOM Manipulation: Dynamically renders the game board and updates messages.
+- Event Handling: Responds to user interactions like clicks and form submissions.
+- Prototypal Thinking (w/ factories): Simulated inheritance-like behavior between modules.
+
+![Vanilla-XO](https://github.com/user-attachments/assets/ed817908-2669-427c-8a5b-5177ea25b869)
